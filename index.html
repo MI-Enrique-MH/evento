@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concurso de Mobile Legends</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            background-image: url('background-image.jpg');
+            background-size: cover;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header img {
+            width: 200px;
+            height: 200px;
+            margin: 30px;
+            border-radius: 50%;
+        }
+        .header button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .header button:hover {
+            background-color: #3e8e41;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="data:image/jpeg;base64,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" alt="Logo de Mobile Legends"> 
+        <h1>Concurso de Mobile Legends</h1>
+        <button class="register-button" onclick="location.href='register.html'">Regístrate</button>
+    </header>
+    <div class="container">
+        <h1>Bienvenido al concurso de Mobile Legends</h1>
+        <p>¡Registra tu equipo para participar en el concurso de Mobile Legends y ganar fabulosos premios!</p>
+    </div>
+    <div class="event-details">
+        <h2>Detalles del evento</h2>
+        <p>Fecha: 20 de febrero de 2023</p>
+        <p>Hora: 10:00 AM</p>
+        <p>Lugar: Coliseo Don Bosco</p>
+        <p>Descripción: Un evento emocionante con conferencistas destacados y partidas emocionantes </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Equipo - Concurso de Mobile Legends</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> 
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            background-image: url('background-image.jpg');
+            background-size: cover;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .register-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .register-form input[type="text"], .register-form input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .register-form button[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .register-form button[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+        .comment-cloud {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            border-radius: 10px;
+            z-index: 1000;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s, opacity 0.5s;
+        }
+        .comment-cloud.visible {
+            visibility: visible;
+            opacity: 1;
+        }
+        .comment-cloud span {
+            margin: 5px;
+            padding: 5px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Registro de Equipo</h1>
+        <form class="register-form">
+            <input type="text" id="team-name" placeholder="Nombre del equipo">
+            <input type="email" id="team-email" placeholder="Correo electrónico del equipo">
+            <button type="submit" onclick="registerTeam()">Enviar Registro</button>
+        </form>
+        <div class="comment-cloud">
+            
+        </div>
+    </div>
+
+    <script>
+        function registerTeam() {
+            
+           
+            message.textContent = 'Equipo registrado';
+            commentCloud.appendChild(message);
+            commentCloud.classList.add('visible');
+
+            
+            setTimeout(() => {
+                commentCloud.classList.remove('visible');
+                commentCloud.removeChild(message);
+            }, 5000); 
+        }
+    </script>
+</body>
+</html>
